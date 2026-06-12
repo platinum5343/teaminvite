@@ -1,0 +1,54 @@
+:root { --indigo:#4F56D1; --indigo-2:#3C45A5; --bg:#EEF0FA; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#0f172a;background:#0b0d17;overflow-x:hidden;-webkit-text-size-adjust:100%}
+
+.bg-layer{position:fixed;inset:0;z-index:0;overflow:hidden}
+.bg-content{position:absolute;inset:0;filter:blur(14px) saturate(1.05);transform:scale(1.06)}
+.bg-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(80,89,201,.15),rgba(10,12,30,.55))}
+.bg-meet{position:absolute;inset:0;background:#1f1f2a;padding:10px;display:flex;flex-direction:column}
+.bg-meet-stage{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px}
+.bg-meet-tile{position:relative;background:linear-gradient(135deg,#6c74de,#4951b8);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.bg-meet-initial{font-size:clamp(48px,14vw,120px);font-weight:700;color:rgba(255,255,255,.55);line-height:1}
+.bg-meet-name{position:absolute;left:10px;bottom:8px;color:#fff;font-size:clamp(11px,2.6vw,14px);opacity:.85;background:rgba(0,0,0,.25);padding:3px 8px;border-radius:4px}
+
+.modal-wrap{position:relative;z-index:2;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:clamp(12px,4vw,24px)}
+.modal{width:100%;max-width:460px;background:#EEF0FA;border-radius:clamp(14px,3vw,18px);padding:clamp(18px,4.5vw,26px);box-shadow:0 30px 80px rgba(0,0,0,.35),0 4px 12px rgba(0,0,0,.15)}
+
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:clamp(12px,3vw,18px)}
+.brand-logo{position:relative;width:26px;height:26px;border-radius:6px;background:#4F56D1;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 auto}
+.brand-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:#a4abff;right:-3px;top:-3px;border:2px solid #EEF0FA}
+.brand-name{font-weight:600;font-size:15px;color:#1f2937}
+
+.title{font-size:clamp(20px,5.5vw,26px);line-height:1.2;margin:0 0 10px;font-weight:800;letter-spacing:-.01em;color:#0b1020}
+.subtitle{margin:0 0 clamp(14px,3.5vw,18px);font-size:clamp(13px,3.6vw,15px);color:#4b5572;line-height:1.45}
+
+.row{display:flex;align-items:center;gap:12px;background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:12px;box-shadow:0 1px 0 rgba(15,23,42,.04);min-width:0}
+.row-text{min-width:0;flex:1 1 auto}
+.avatar{width:38px;height:38px;border-radius:50%;background:#4F56D1;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex:0 0 auto}
+.pdf-badge{width:46px;height:38px;border-radius:8px;background:#E84A2B;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;letter-spacing:.5px;flex:0 0 auto}
+.row-title{font-weight:700;font-size:clamp(14px,3.8vw,15px);color:#0b1020;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row-sub{font-size:clamp(12px,3.3vw,13px);color:#6b7280;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.code-box{background:#fff;border-radius:12px;padding:14px 16px;margin:4px 0 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.code-label{font-size:11px;font-weight:700;letter-spacing:.12em;color:#6b7280}
+.code-value{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(15px,4.8vw,22px);font-weight:800;letter-spacing:.12em;color:#0b1020;word-break:break-all}
+
+.enter-line{margin:6px 0 14px;font-size:clamp(13px,3.5vw,14px);color:#4b5572;word-break:break-word}
+.enter-line a{color:#4F56D1;text-decoration:none;font-weight:600}
+
+.join-btn{width:100%;border:0;border-radius:12px;background:#4F56D1;color:#fff;font-size:clamp(15px,4vw,16px);font-weight:700;padding:14px 16px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 20px rgba(79,86,209,.4)}
+.join-btn:hover{background:#4148bd}
+
+.foot{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;margin-top:16px;font-size:clamp(11.5px,3vw,12.5px);color:#6b7280}
+.foot-item{display:flex;align-items:center;gap:6px;min-width:0}
+.foot-item:last-child{justify-content:flex-end;text-align:right}
+.foot-dot{color:#9aa1c7}
+
+.expires{text-align:center;margin-top:12px;font-size:clamp(12px,3.3vw,13px);color:#6b7280}
+
+@media (max-width:380px){
+  .foot{grid-template-columns:1fr}
+  .foot-item:last-child{justify-content:flex-start;text-align:left}
+  .pdf-badge{width:40px;height:34px}
+  .avatar{width:34px;height:34px;font-size:14px}
+}
